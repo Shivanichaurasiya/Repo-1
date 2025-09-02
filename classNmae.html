@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name"></h1>
+    <br>
+    <button type="text" onclick="insert()">click me</button>
+    <br>
+    <br>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <br>
+    <button onclick="boxInsert()">Box insert</button>
+    <script>
+        function insert(){
+            var a =document.getElementById('name').textContent="this is the hesding 1"
+
+        }
+
+        function boxInsert(){
+            var details=document.getElementsByClassName('box')
+
+            for(text1 of details){
+                text1.textContent="this is the box";
+            }
+        }
+    </script>
+</body>
+</htm

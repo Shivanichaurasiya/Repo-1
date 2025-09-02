@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="txt" type="text" value="foo">
+    <script>
+        const txt=document.getElementById('txt');
+        console.log(txt.getAttribute("value"));
+        txt.value="bar";
+        console.log(txt.getAttribute("value"));
+        console.log(txt.value);
+
+
+        txt.setAttribute("value","baz");
+        console.log(txt.getAttribute("value"));
+        console.log(txt.value);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .first {
+        height: 100px;
+        width: 100px;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>this is heading</h1>
+    <button type="submit" onclick="change()">change text</button>
+    <br />
+    <br />
+
+    <div class="first"></div>
+    <br />
+
+    <div class="first"></div>
+    <br />
+
+    <div class="first"></div>
+    <br />
+
+    <div class="first"></div>
+    <br />
+    <button type="submit" onclick="changeColor()">change color</button>
+    <br />
+    <script>
+      function change() {
+        var a = (document.getElementsByTagName("h1").innerHTML =
+          "<h1>this is the heading 2</h1>");
+        document.write(a);
+      }
+      function changeColor() {
+        const rare = document.querySelectorAll(".first");
+        for (let i = 0; i < rare.length; i++) {
+          rare[i].style.backgroundColor = "blue";
+        }
+      }
+    </script>
+  </body>
+</html>
