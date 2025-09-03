@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>heading-1</h1>
+    <h1>heading-1</h1>
+    <h1>heading-1</h1>
+    <h1>heading-1</h1>
+
+    <button onclick="H1ColorChange()">chnage H1</button>
+
+    <h2>heading-2</h2>
+    <h2>heading-2</h2>
+    <h2>heading-2</h2>
+    <h2>heading-2</h2>
+
+    <button onclick="H2ColorChange()">change H2</button>
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse repellendus
+      sequi quasi. Ad ab corporis, ut rem eligendi dolor atque beatae quod
+      earum, voluptate sequi expedita, officia non eveniet alias.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga inventore
+      fugiat voluptate omnis. Eius fugit, quasi culpa eaque dolores quis? Optio
+      eos hic nesciunt consequuntur non aliquid laudantium labore enim.
+    </p>
+    <br />
+
+    <button onclick="pColorChange()">Change P</button>
+
+    <ul>
+      <li>hello</li>
+      <li>python</li>
+      <li>ASP.Net</li>
+      <li>javaScript</li>
+    </ul>
+
+    <ul>
+      <li>hello</li>
+      <li>python</li>
+      <li>ASP.Net</li>
+      <li>javaScript</li>
+    </ul>
+
+    <button onclick="ulColorChange()">Change UL</button><br /><br />
+
+    <button onclick="startAll()">change all content</button><br />
+
+    <button onclick="stopAll()">stop</button>
+    <script>
+      //var allIntervalId = null;
+
+      var h1 = document.querySelectorAll("h1");
+      var h2 = document.querySelectorAll("h2");
+      var p = document.querySelectorAll("p");
+      var ul = document.querySelectorAll("ul");
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          var r = Math.floor(Math.random() * 16);
+          color = color + letters[r];
+        }
+        return color;
+      }
+
+      let globalInterval = null;
+
+      function changeAllColors() {
+        document.querySelectorAll("h1,h2,p,ul").forEach((el) => {
+          el.style.color = getRandomColor();
+        });
+      }
+
+      function startAll() {
+        if (!globalInterval) {
+          globalInterval = setInterval(changeAllColors, 1000);
+        }
+      }
+
+      function stopAll() {
+        clearInterval(globalInterval);
+        globalInterval = null;
+      }
+
+      //for heading 1
+      function colorChange1() {
+        for (head of h1) {
+          head.style.color = getRandomColor();
+        }
+      }
+
+      function H1ColorChange() {
+        setInterval(colorChange1, 1000);
+      }
+
+      //for heading 2
+      function colorChange2() {
+        for (head2 of h2) {
+          head2.style.color = getRandomColor();
+        }
+      }
+
+      function H2ColorChange() {
+        setInterval(colorChange2, 1000);
+      }
+
+      // for peragraph
+      function colorChange3() {
+        for (head3 of p) {
+          head3.style.color = getRandomColor();
+        }
+      }
+
+      function pColorChange() {
+        setInterval(colorChange3, 1000);
+      }
+
+      //for ul
+
+      function colorChange4() {
+        for (head4 of ul) {
+          head4.style.color = getRandomColor();
+        }
+      }
+
+      function ulColorChange() {
+        setInterval(colorChange4, 1000);
+      }
+
+     
+    </script>
+  </body>
+</html>

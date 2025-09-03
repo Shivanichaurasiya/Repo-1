@@ -9,14 +9,14 @@
     <input id="txt" type="text" value="foo">
     <script>
         const txt=document.getElementById('txt');
-        console.log(txt.getAttribute("value"));
+        console.log(txt.getAttribute("value"));//foo
         txt.value="bar";
-        console.log(txt.getAttribute("value"));
-        console.log(txt.value);
+        console.log(txt.getAttribute("value"));//foo
+        console.log(txt.value);//bar
 
 
         txt.setAttribute("value","baz");
-        console.log(txt.getAttribute("value"));
+        console.log(txt.getAttribute("value"));//baz
         console.log(txt.value);
 
     </script>
