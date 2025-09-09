@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="red square" id="box">HollyWood</div>
+    <script>
+      let box = document.getElementById("box");
+      console.log(box.classList);
+      //add class
+
+      box.classList.add("shadow");
+      console.log(box.classList);
+
+      //remove class
+
+      box.classList.remove("red");
+      console.log(box.classList);
+
+      //toggle class
+
+      // box.classList.toggle("hidden")
+      // console.og(box.classList);
+
+      //replace class
+
+      box.classList.replace("square", "circle");
+      console.log(box.classList);
+
+      try {
+        let x = JSON.parse('{"name":"Shivani"}'); // sahi JSON
+        console.log(x.name);
+      } catch (error) {
+        console.log("JSON galat hai:", error.message);
+      } finally {
+        console.log("Ye hamesha chalega!");
+      }
+    </script>
+  </body>
+</html>

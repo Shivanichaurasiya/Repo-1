@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: #f0f0f0;
+        }
+        .main{
+            border:1px solid black;
+            height:500px;
+            width:400px;
+            display: none;
+            background-color: #ffffff;
+           
+        }
+        .main {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+        }
+
+        .form1{
+            align-items: center;
+            text-align: center;
+        }
+        .label{
+            font-size: 22px;
+        }
+        input {
+            width: 350px; 
+            height: 35px;
+        }
+
+                .main2{
+            border:1px solid black;
+            height:500px;
+            width:400px;
+            display: none;
+            
+           
+        }
+        .main2{
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           background-color: #ffffff;
+        }
+
+        .form2{
+            align-items: center;
+            text-align: center;
+        }
+        .label{
+            font-size: 22px;
+        }
+        input {
+            width: 350px; 
+            height: 35px;
+        }
+        .btn1{
+            position: absolute;
+           top:10%; 
+           left: 40%;
+           transform: translate(-50%, -50%);
+           height:40px;
+           width:200px;
+           background-color:  rgb(16, 246, 246);
+           font-size: 20px;
+           border:none;
+           border-radius: 10px;
+        } 
+        .btn2{
+                   
+            position: absolute;
+           top:10%;
+           left: 55%;
+           transform: translate(-50%, -50%);
+           height:40px;
+           width:200px;
+           background-color: rgb(16, 246, 246);
+           font-size: 20px;
+           border:none;
+           border-radius: 10px;
+     
+
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        <form action="" class="form1">
+            <h1 id="h1">Login</h1>
+            <hr>
+            <label for="username "class="label">Username</label><br><br>
+            <input type="text" placeholder="Enter username"/><br><br>
+            <label for="email" class="label" >Email</label><br><br>
+            <input type="email" placeholder="Enter Email"/><br><br>
+            <label for="password" class="label">Password</label><br><br>
+            <input type="password" placeholder="Enter Password"/><br><br><br>
+
+            <button style="height:40px; width:200px">Login</button>
+           
+
+
+        </form>
+    </div>
+
+     <div class="main2">
+        
+        <form action="" class="form2">
+            <h1 id="h1">Sign Up</h1>
+            <hr>
+            <label for="username "class="label">Username</label><br><br>
+            <input type="text" placeholder="Enter username"/><br><br>
+            <label for="email" class="label" >Email</label><br><br>
+            <input type="email" placeholder="Enter Email"/><br><br>
+            <label for="password" class="label">Password</label><br><br>
+            <input type="password" placeholder="Enter Password"/><br><br><br>
+
+            <button style="height:40px; width:200px">Sign Up</button>
+           
+
+
+        </form>
+    </div>
+    
+
+    <button class="btn1">Login</button>
+    <button class="btn2">Sign Up</button>
+
+
+
+
+    <script>
+         const loginBtn = document.querySelector(".btn1");
+         const signupBtn = document.querySelector(".btn2");
+         const formBox = document.querySelector(".main");
+         const formBox2 = document.querySelector(".main2");
+
+  // Show login form when Login button is clicked
+        loginBtn.addEventListener("click", function () {
+        formBox.style.display = "block"; 
+        formBox2.style.display = "none";
+         });
+
+         signupBtn.addEventListener("click",function(){
+            formBox2.style.display="block"
+            formBox.style.display = "none";
+         })
+
+
+
+
+    </script>
+
+
+</body>
+</html>
