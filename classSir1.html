@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="display"></p>
+
+    <p id="show"></p>
+    <form id="carForm">
+      <input
+        type="text"
+        placeholder="enter your name / owner name"
+        id="username"
+      />
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      class Car {
+        constructor(name, model, year, username) {
+          this.name = name;
+          this.model = model;
+          this.year = year;
+          this.username = username;
+        }
+
+        details() {
+          return this.name + " " + " " + this.model + " " + this.year;
+        }
+      }
+
+      document
+        .getElementById("carForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const username = document.getElementById("username").value;
+
+          const myCar = new Car("Audi", "A4", 2019, username);
+
+        //   const myCar1 = new Car("Ferrari", "X5", 2020, username);
+
+          document.getElementById("display").innerHTML =
+            "My car Name is : " +
+            myCar.name +
+            "<br>" +
+            "My car model name is : " +
+            myCar.model +
+            "<br>" +
+            "Manufactured Year : " +
+            myCar.year +
+            "<br>" +
+            "owner name : " +
+            myCar.username +
+            "<br>" +
+            "details of the car :" +
+            myCar.details();
+
+          document.getElementById("show").innerHTML =
+            "My car Name is : " +
+            myCar1.name +
+            "<br>" +
+            "My car model name is : " +
+            myCar1.model +
+            "<br>" +
+            "Manufactured Year : " +
+            myCar1.year +
+            "<br>" +
+            "Owner NAME : " +
+            myCar1.username +
+            "<br>" +
+            "details of the car :" +
+            myCar1.details();
+        });
+    </script>
+  </body>
+</html>
